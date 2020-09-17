@@ -27,6 +27,16 @@ lineage_platform_res := APPS/org.lineageos.platform-res_intermediates/aapt
 # List of packages used in lineage-api-stubs
 lineage_stub_packages := lineageos.app:lineageos.content:lineageos.hardware:lineageos.media:lineageos.os:lineageos.preference:lineageos.profiles:lineageos.providers:lineageos.platform:lineageos.power:lineageos.util:lineageos.weather:lineageos.weatherservice:lineageos.style:lineageos.trust
 
+lineage_sdk_src := sdk/src/java/lineageos
+lineage_sdk_internal_src := sdk/src/java/org/lineageos/internal
+library_src := lineage/lib/main/java
+
+lineage_sdk_LOCAL_JAVA_LIBRARIES := \
+    android-support-annotations \
+    android-support-v7-preference \
+    android-support-v7-recyclerview \
+    android-support-v14-preference
+
 lineage_framework_module := $(LOCAL_INSTALLED_MODULE)
 
 # Make sure that R.java and Manifest.java are built before we build

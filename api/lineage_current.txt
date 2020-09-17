@@ -338,88 +338,6 @@ package lineageos.os {
 
 }
 
-package lineageos.platform {
-
-  public final class Manifest {
-    ctor public Manifest();
-  }
-
-  public static final class Manifest.permission {
-    ctor public Manifest.permission();
-    field public static final java.lang.String ACCESS_WEATHER_MANAGER = "lineageos.permission.ACCESS_WEATHER_MANAGER";
-    field public static final java.lang.String BIND_WEATHER_PROVIDER_SERVICE = "lineageos.permission.BIND_WEATHER_PROVIDER_SERVICE";
-    field public static final java.lang.String CHANGE_STYLE = "lineageos.permission.CHANGE_STYLE";
-    field public static final java.lang.String HARDWARE_ABSTRACTION_ACCESS = "lineageos.permission.HARDWARE_ABSTRACTION_ACCESS";
-    field public static final java.lang.String MANAGE_LIVEDISPLAY = "lineageos.permission.MANAGE_LIVEDISPLAY";
-    field public static final java.lang.String MANAGE_REMOTE_PREFERENCES = "lineageos.permission.MANAGE_REMOTE_PREFERENCES";
-    field public static final java.lang.String MODIFY_PROFILES = "lineageos.permission.MODIFY_PROFILES";
-    field public static final java.lang.String PERFORMANCE_ACCESS = "lineageos.permission.PERFORMANCE_ACCESS";
-    field public static final java.lang.String PROTECTED_APP = "lineageos.permission.PROTECTED_APP";
-    field public static final java.lang.String READ_DATAUSAGE = "lineageos.permission.READ_DATAUSAGE";
-    field public static final java.lang.String READ_WEATHER = "lineageos.permission.READ_WEATHER";
-    field public static final java.lang.String TRUST_INTERFACE = "lineageos.permission.TRUST_INTERFACE";
-    field public static final java.lang.String WRITE_DATAUSAGE = "lineageos.permission.WRITE_DATAUSAGE";
-    field public static final java.lang.String WRITE_SECURE_SETTINGS = "lineageos.permission.WRITE_SECURE_SETTINGS";
-    field public static final java.lang.String WRITE_SETTINGS = "lineageos.permission.WRITE_SETTINGS";
-    field public static final java.lang.String WRITE_WEATHER = "lineageos.permission.WRITE_WEATHER";
-  }
-
-  public final class R {
-    ctor public R();
-  }
-
-  public static final class R.anim {
-    ctor public R.anim();
-  }
-
-  public static final class R.array {
-    ctor public R.array();
-  }
-
-  public static final class R.attr {
-    ctor public R.attr();
-    field public static final int minSummaryLines = 1057030154; // 0x3f01000a
-    field public static final int replacesKey = 1057030153; // 0x3f010009
-    field public static final int requiresAction = 1057030152; // 0x3f010008
-    field public static final int requiresConfig = 1057030148; // 0x3f010004
-    field public static final int requiresConfigMask = 1057030155; // 0x3f01000b
-    field public static final int requiresFeature = 1057030147; // 0x3f010003
-    field public static final int requiresOwner = 1057030150; // 0x3f010006
-    field public static final int requiresPackage = 1057030146; // 0x3f010002
-    field public static final int requiresProperty = 1057030149; // 0x3f010005
-    field public static final int xmlRes = 1057030151; // 0x3f010007
-  }
-
-  public static final class R.bool {
-    ctor public R.bool();
-  }
-
-  public static final class R.color {
-    ctor public R.color();
-  }
-
-  public static final class R.dimen {
-    ctor public R.dimen();
-  }
-
-  public static final class R.drawable {
-    ctor public R.drawable();
-  }
-
-  public static final class R.integer {
-    ctor public R.integer();
-  }
-
-  public static final class R.string {
-    ctor public R.string();
-  }
-
-  public static final class R.xml {
-    ctor public R.xml();
-  }
-
-}
-
 package lineageos.power {
 
   public class PerformanceManager {
@@ -460,42 +378,63 @@ package lineageos.preference {
     ctor public GlobalSettingSwitchPreference(android.content.Context, android.util.AttributeSet, int);
     ctor public GlobalSettingSwitchPreference(android.content.Context, android.util.AttributeSet);
     ctor public GlobalSettingSwitchPreference(android.content.Context);
+    method protected boolean getBoolean(java.lang.String, boolean);
+    method protected boolean isPersisted();
+    method protected void putBoolean(java.lang.String, boolean);
   }
 
   public class LineageGlobalSettingSwitchPreference extends lineageos.preference.SelfRemovingSwitchPreference {
     ctor public LineageGlobalSettingSwitchPreference(android.content.Context, android.util.AttributeSet, int);
     ctor public LineageGlobalSettingSwitchPreference(android.content.Context, android.util.AttributeSet);
     ctor public LineageGlobalSettingSwitchPreference(android.content.Context);
+    method protected boolean getBoolean(java.lang.String, boolean);
+    method protected boolean isPersisted();
+    method protected void putBoolean(java.lang.String, boolean);
   }
 
   public class LineageSecureSettingListPreference extends lineageos.preference.SelfRemovingListPreference {
     ctor public LineageSecureSettingListPreference(android.content.Context, android.util.AttributeSet, int);
     ctor public LineageSecureSettingListPreference(android.content.Context, android.util.AttributeSet);
     method public int getIntValue(int);
+    method protected java.lang.String getString(java.lang.String, java.lang.String);
+    method protected boolean isPersisted();
+    method protected void putString(java.lang.String, java.lang.String);
   }
 
   public class LineageSecureSettingSwitchPreference extends lineageos.preference.SelfRemovingSwitchPreference {
     ctor public LineageSecureSettingSwitchPreference(android.content.Context, android.util.AttributeSet, int);
     ctor public LineageSecureSettingSwitchPreference(android.content.Context, android.util.AttributeSet);
     ctor public LineageSecureSettingSwitchPreference(android.content.Context);
+    method protected boolean getBoolean(java.lang.String, boolean);
+    method protected boolean isPersisted();
+    method protected void putBoolean(java.lang.String, boolean);
   }
 
   public class LineageSystemSettingDropDownPreference extends lineageos.preference.SelfRemovingDropDownPreference {
     ctor public LineageSystemSettingDropDownPreference(android.content.Context, android.util.AttributeSet, int);
     ctor public LineageSystemSettingDropDownPreference(android.content.Context, android.util.AttributeSet);
     method public int getIntValue(int);
+    method protected java.lang.String getString(java.lang.String, java.lang.String);
+    method protected boolean isPersisted();
+    method protected void putString(java.lang.String, java.lang.String);
   }
 
   public class LineageSystemSettingListPreference extends lineageos.preference.SelfRemovingListPreference {
     ctor public LineageSystemSettingListPreference(android.content.Context, android.util.AttributeSet, int);
     ctor public LineageSystemSettingListPreference(android.content.Context, android.util.AttributeSet);
     method public int getIntValue(int);
+    method protected java.lang.String getString(java.lang.String, java.lang.String);
+    method protected boolean isPersisted();
+    method protected void putString(java.lang.String, java.lang.String);
   }
 
   public class LineageSystemSettingSwitchPreference extends lineageos.preference.SelfRemovingSwitchPreference {
     ctor public LineageSystemSettingSwitchPreference(android.content.Context, android.util.AttributeSet, int);
     ctor public LineageSystemSettingSwitchPreference(android.content.Context, android.util.AttributeSet);
     ctor public LineageSystemSettingSwitchPreference(android.content.Context);
+    method protected boolean getBoolean(java.lang.String, boolean);
+    method protected boolean isPersisted();
+    method protected void putBoolean(java.lang.String, boolean);
   }
 
   public class RemotePreference extends lineageos.preference.SelfRemovingPreference {
@@ -527,21 +466,30 @@ package lineageos.preference {
     ctor public SecureSettingSwitchPreference(android.content.Context, android.util.AttributeSet, int);
     ctor public SecureSettingSwitchPreference(android.content.Context, android.util.AttributeSet);
     ctor public SecureSettingSwitchPreference(android.content.Context);
+    method protected boolean getBoolean(java.lang.String, boolean);
+    method protected boolean isPersisted();
+    method protected void putBoolean(java.lang.String, boolean);
   }
 
-  public class SelfRemovingDropDownPreference extends android.support.v7.preference.DropDownPreference {
+  public abstract class SelfRemovingDropDownPreference extends android.support.v7.preference.DropDownPreference {
     ctor public SelfRemovingDropDownPreference(android.content.Context, android.util.AttributeSet, int);
     ctor public SelfRemovingDropDownPreference(android.content.Context, android.util.AttributeSet);
     ctor public SelfRemovingDropDownPreference(android.content.Context);
+    method protected abstract java.lang.String getString(java.lang.String, java.lang.String);
     method public boolean isAvailable();
+    method protected abstract boolean isPersisted();
+    method protected abstract void putString(java.lang.String, java.lang.String);
     method public void setAvailable(boolean);
   }
 
-  public class SelfRemovingListPreference extends android.support.v7.preference.ListPreference {
+  public abstract class SelfRemovingListPreference extends android.support.v7.preference.ListPreference {
     ctor public SelfRemovingListPreference(android.content.Context, android.util.AttributeSet, int);
     ctor public SelfRemovingListPreference(android.content.Context, android.util.AttributeSet);
     ctor public SelfRemovingListPreference(android.content.Context);
+    method protected abstract java.lang.String getString(java.lang.String, java.lang.String);
     method public boolean isAvailable();
+    method protected abstract boolean isPersisted();
+    method protected abstract void putString(java.lang.String, java.lang.String);
     method public void setAvailable(boolean);
   }
 
@@ -554,11 +502,14 @@ package lineageos.preference {
     method public void setAvailable(boolean);
   }
 
-  public class SelfRemovingSwitchPreference extends android.support.v14.preference.SwitchPreference {
+  public abstract class SelfRemovingSwitchPreference extends android.support.v14.preference.SwitchPreference {
     ctor public SelfRemovingSwitchPreference(android.content.Context, android.util.AttributeSet, int);
     ctor public SelfRemovingSwitchPreference(android.content.Context, android.util.AttributeSet);
     ctor public SelfRemovingSwitchPreference(android.content.Context);
+    method protected abstract boolean getBoolean(java.lang.String, boolean);
     method public boolean isAvailable();
+    method protected abstract boolean isPersisted();
+    method protected abstract void putBoolean(java.lang.String, boolean);
     method public void setAvailable(boolean);
   }
 
@@ -582,6 +533,9 @@ package lineageos.preference {
     ctor public SystemSettingSwitchPreference(android.content.Context, android.util.AttributeSet, int);
     ctor public SystemSettingSwitchPreference(android.content.Context, android.util.AttributeSet);
     ctor public SystemSettingSwitchPreference(android.content.Context);
+    method protected boolean getBoolean(java.lang.String, boolean);
+    method protected boolean isPersisted();
+    method protected void putBoolean(java.lang.String, boolean);
   }
 
 }
@@ -772,8 +726,12 @@ package lineageos.providers {
     method public static boolean putString(android.content.ContentResolver, java.lang.String, java.lang.String);
     field public static final android.net.Uri CONTENT_URI;
     field public static final java.lang.String SYS_PROP_LINEAGE_SETTING_VERSION = "sys.lineage_settings_secure_version";
+    field public static final java.lang.String TETHERING_ALLOW_VPN_UPSTREAMS = "tethering_allow_vpn_upstreams";
+    field public static final lineageos.providers.LineageSettings.Validator TETHERING_ALLOW_VPN_UPSTREAMS_VALIDATOR;
     field public static final deprecated java.lang.String TRUST_NOTIFICATIONS = "trust_notifications";
     field public static final java.lang.String TRUST_WARNINGS = "trust_warnings";
+    field public static final java.lang.String VOLUME_PANEL_ON_LEFT = "volume_panel_on_left";
+    field public static final lineageos.providers.LineageSettings.Validator VOLUME_PANEL_ON_LEFT_VALIDATOR;
   }
 
   public static final class LineageSettings.System extends android.provider.Settings.NameValueTable {
@@ -1001,7 +959,7 @@ package lineageos.style {
     method public boolean setAccent(java.lang.String);
     method public boolean setGlobalStyle(int, java.lang.String);
     field public static final java.lang.String ACCENT_DEFAULT = "lineageos";
-    field public static final java.lang.String CHANGE_STYLE_SETTINGS_PERMISSION = "lineageos.permission.CHANGE_STYLE";
+    field public static final java.lang.String CHANGE_STYLE_SETTINGS_PERMISSION = "android.permission.CHANGE_OVERLAY_PACKAGES";
     field public static final int STYLE_GLOBAL_AUTO_DAYTIME = 1; // 0x1
     field public static final int STYLE_GLOBAL_AUTO_WALLPAPER = 0; // 0x0
     field public static final int STYLE_GLOBAL_DARK = 3; // 0x3
@@ -1023,7 +981,7 @@ package lineageos.trust {
   public class TrustInterface {
     method public static lineageos.trust.TrustInterface getInstance(android.content.Context);
     method public int getLevelForFeature(int);
-    method public boolean postNotificationForFeature(int);
+    method public boolean hasUsbRestrictor();
     method public boolean removeNotificationForFeature(int);
     field public static final int ERROR_UNDEFINED = -1; // 0xffffffff
     field public static final int TRUST_FEATURE_ENCRYPTION = 4; // 0x4
@@ -1213,4 +1171,3 @@ package lineageos.weatherservice {
   }
 
 }
-
